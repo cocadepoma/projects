@@ -1,0 +1,70 @@
+/* You can add global styles to this file, and also import other style files */
+@import url("https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC:wght@100;400;800&display=swap");
+
+html {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #14161e;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-weight: 200;
+  color: white;
+}
+
+p {
+  color: white;
+}
+
+hr {
+  color: white;
+}
+
+.navbar-brand {
+  font-weight: 200;
+  color: #bd4c5f !important;
+}
+
+.btn-outline-success {
+  border-color: #bd4c5f !important;
+  color: #bd4c5f !important;
+}
+
+.btn-outline-success:hover {
+  background-color: #272a36;
+  color: white !important;
+}
+
+.block {
+  display: block;
+}
+
+.container-ppal {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+.content {
+  flex: 1;
+  max-width: 1200px;
+}
+
+.footer {
+  flex-shrink: 0;
+}
+.blue {
+  color: rgb(40, 42, 146);
+}
+.toggleFade {
+  margin-left: 150px;
+  transition: all 0.4s cubic-bezier(0.95, 0.05, 0.795, 0.35);
+}

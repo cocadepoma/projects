@@ -1,0 +1,13 @@
+footer {
+  background-color: rgba(165, 42, 42, 0.479);
+  color: white;
+}
+.list-footer {
+  list-style: none;
+} 
+.list-footer li {
+  margin-left: 10px;
+}
+.list-footer li:first-child {
+  margin-left: 0;
+}

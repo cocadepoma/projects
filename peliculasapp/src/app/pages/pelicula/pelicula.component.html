@@ -1,0 +1,154 @@
+<div
+  *ngIf="movie"
+  class="fondo animate__animated animate__fadeIn"
+  [ngStyle]="{
+    'background-size': 'cover',
+    'background-image':
+      'url(https://image.tmdb.org/t/p/original' + movie.backdrop_path + ')'
+  }"
+></div>
+<div class="wrapper animate__animated animate__fadeIn" *ngIf="movie">
+  <div class="row mt-5 p-3 g-0">
+    <div class="title">
+      <h1 class="titulo">{{ this.movie.title }}</h1>
+    </div>
+
+    <div
+      class="row mt-5 p-0 d-flex justify-content-center align-items-md-center g-0"
+    >
+      <div
+        class="col-md-4 d-flex justify-content-center align-items-center flex-column d-md-table p-md-0"
+      >
+        <img
+          [alt]="movie.title"
+          class="img-thumbnail img"
+          [src]="movie.poster_path | poster"
+        />
+      </div>
+
+      <div class="col-md-8 mt-3 mt-md-0 info px-1 px-md-3 px-lg-4">
+        <h3 class="head-info text-center mt-3 mt-lg-0">Información</h3>
+        <p class="p-bolder m-0">
+          Fecha de Estreno:
+          <span class="bolder">{{ this.movie.release_date }}</span>
+        </p>
+        <p class="p-bolder m-0">
+          Título original:
+          <span class="bolder">{{ this.movie.original_title }}</span>
+        </p>
+        <p *ngIf="countries" class="p-bolder m-0">
+          País:
+          <span class="bolder" *ngFor="let country of countries; let i = index"
+            >{{ country }}<span *ngIf="i < countriesLength - 1">, </span>
+          </span>
+        </p>
+        <p class="p-bolder m-0">
+          Productoras:
+          <span class="bolder" *ngFor="let company of companies; let i = index"
+            >{{ company }}<span *ngIf="i < companiesLength - 1">, </span>
+          </span>
+        </p>
+        <p class="p-bolder m-0">
+          Duración: <span class="bolder">{{ this.movie.runtime }}min</span>
+        </p>
+        <p class="p-bolder m-0">
+          Presupuesto:
+          <span class="bolder" *ngIf="this.movie.budget > 0">{{
+            this.movie.budget | currency
+          }}</span>
+          <span class="bolder" *ngIf="this.movie.budget === 0">
+            Desconocido
+          </span>
+        </p>
+        <p class="p-bolder m-0">
+          Géneros:
+          <span class="bolder" *ngFor="let genre of genres; let i = index"
+            >{{ genre }}<span *ngIf="i < genresLength - 1">, </span>
+          </span>
+        </p>
+
+        <p class="p-bolder m-0">
+          Web:
+          <a
+            class="a-bolder"
+            href="{{ this.movie.homepage }}"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Link</a
+          >
+        </p>
+        <div class="sinopsis col-md-12">
+          <h3 class="text-md-left head-info mt-3 mt-lg-1">Sinopsis</h3>
+          <p>
+            {{ this.movie.overview }}
+          </p>
+        </div>
+        <div class="col-12 mt-3">
+          <h3>Crítica</h3>
+          <div class="critica d-flex align-items-center justify-content-center">
+            <div class="val" [ngSwitch]="getColor(this.movie.vote_average)">
+              <span
+                class="valoracion"
+                *ngSwitchCase="'red'"
+                [ngStyle]="{ 'background-color': 'red' }"
+              >
+                {{ this.movie.vote_average * 10 | number: "1." }}
+              </span>
+              <span
+                class="valoracion"
+                *ngSwitchCase="'orange'"
+                [ngStyle]="{ 'background-color': 'orange' }"
+              >
+                {{ this.movie.vote_average * 10 | number: "1." }}
+              </span>
+              <span
+                class="valoracion"
+                *ngSwitchCase="'yellow'"
+                [ngStyle]="{ 'background-color': 'green', color: 'white' }"
+              >
+                {{ this.movie.vote_average * 10 | number: "1." }}
+              </span>
+              <span
+                class="valoracion"
+                *ngSwitchCase="'green'"
+                [ngStyle]="{ 'background-color': 'greenyellow' }"
+              >
+                {{ this.movie.vote_average * 10 | number: "1." }}
+              </span>
+              <span *ngSwitchCase="'black'"></span>
+            </div>
+
+            <div class="stars">
+              <p class="m-0 p-0">
+                Total votos:
+                <span class="votos">{{ this.movie.vote_count }}</span>
+              </p>
+              <star-rating
+                [value]="movie.vote_average * 0.5"
+                totalstars="5"
+                checkedcolor="yellow"
+                uncheckedcolor="grey"
+                size="24px"
+                readonly="false"
+                (rate)="onRate($event)"
+              ></star-rating>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="return mt-5">
+      <div class="col-12 d-flex justify-content-end">
+        <a (click)="volver()" class="btn btn-outline-info">Volver</a>
+      </div>
+    </div>
+
+    <h3>Reparto</h3>
+    <div class="row g-0 mt-3 pb-3" *ngIf="cast">
+      <div class="col">
+        <app-cast-slideshow [cast]="this.cast"></app-cast-slideshow>
+      </div>
+    </div>
+  </div>
+</div>

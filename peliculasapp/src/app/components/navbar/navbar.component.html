@@ -1,0 +1,74 @@
+<nav class="navbar navbar-expand-sm bg-nav">
+  <div class="container-fluid">
+    <a class="navbar-brand logo p-0" routerLink="./home"
+      >movie<span class="logo-finder">Find</span>er.com</a
+    >
+
+    <div class="wrapper-input" id="navbarSupportedContent">
+      <div class="d-flex">
+        <div class="input-group">
+          <input
+            #txtBuscar
+            (keyup.enter)="buscarPelicula(txtBuscar.value)"
+            class="form-control me-2 search-input"
+            type="search"
+            placeholder="Buscar película..."
+            aria-label="Search"
+          />
+
+          <span class="input-group-btn">
+            <button
+              (click)="buscarPelicula(txtBuscar.value)"
+              class="btn search"
+              type="submit"
+            >
+              <i class="fa fa-search search-icon"></i>
+            </button>
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+<div class="nav-menu-wrapper d-none d-md-block">
+  <div class="col container p-1 d-flex justify-content-end d-md-block">
+    <ul
+      class="nav-menu m-0 py-2 px-3 d-none d-md-flex flex-column flex-md-row justify-content-center justify-content-md-between align-items-center list-unstyled"
+    >
+      <li routerLink="./genero/28">Acción</li>
+      <li routerLink="./genero/35">Comedia</li>
+      <li routerLink="./genero/878">Ciencia-ficción</li>
+      <li routerLink="./genero/16">Animación</li>
+      <li routerLink="./genero/10752">Bélica</li>
+      <li routerLink="./genero/27">Terror</li>
+    </ul>
+  </div>
+</div>
+<span
+  id="dentro-2"
+  *ngIf="!show"
+  (click)="showResponsive()"
+  class="burguer d-md-none"
+  ><i id="dentro-4" class="fa fa-bars"></i
+></span>
+
+<div
+  *ngIf="show"
+  class="responsive-wrapper animate__animated animate__fadeInLeftBig animate__faster"
+  id="dentro"
+>
+  <ul
+    id="dentro-3"
+    class="responsive-list list-unstyled text-center pt-5 nav-menu"
+  >
+    <li>
+      <i (click)="showResponsive()" class="close far fa-times-circle"></i>
+    </li>
+    <li class="mb-2" routerLink="./genero/28">Acción</li>
+    <li class="mb-2" routerLink="./genero/35">Comedia</li>
+    <li class="mb-2" routerLink="./genero/878">Ciencia-ficción</li>
+    <li class="mb-2" routerLink="./genero/16">Animación</li>
+    <li class="mb-2" routerLink="./genero/10752">Bélica</li>
+    <li class="mb-2" routerLink="./genero/27">Terror</li>
+  </ul>
+</div>

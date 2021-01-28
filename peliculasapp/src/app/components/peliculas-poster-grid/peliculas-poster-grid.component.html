@@ -1,0 +1,62 @@
+<div class="row g-0 mt-3">
+  <div
+    class="col-md-4 col-lg-3 col-xl-2 mb-5 grid-films animate__animated animate__fadeIn animate__faster"
+    *ngFor="let movie of movies"
+  >
+    <img
+      (click)="onMovieClick(movie)"
+      class="poster"
+      [src]="movie.poster_path | poster"
+    />
+
+    <div class="px-2 poster-info">
+      <h3>{{ movie.title }}</h3>
+      <div class="row g-0">
+        <div class="col-12 text-white d-flex justify-content-center">
+          <star-rating
+            class="m-l-1"
+            [value]="movie.vote_average * 0.5"
+            totalstars="5"
+            checkedcolor="yellow"
+            uncheckedcolor="grey"
+            size="14px"
+            readonly="false"
+            (rate)="onRate($event)"
+          ></star-rating>
+
+          <div class="val" [ngSwitch]="getColor(this.movie.vote_average)">
+            <span
+              class="valoracion-home"
+              *ngSwitchCase="'red'"
+              [ngStyle]="{ 'background-color': 'red' }"
+            >
+              {{ this.movie.vote_average * 10 | number: "1." }}
+            </span>
+            <span
+              class="valoracion-home"
+              *ngSwitchCase="'orange'"
+              [ngStyle]="{ 'background-color': 'orange' }"
+            >
+              {{ this.movie.vote_average * 10 | number: "1." }}
+            </span>
+            <span
+              class="valoracion-home"
+              *ngSwitchCase="'yellow'"
+              [ngStyle]="{ 'background-color': 'green', color: 'white' }"
+            >
+              {{ this.movie.vote_average * 10 | number: "1." }}
+            </span>
+            <span
+              class="valoracion-home"
+              *ngSwitchCase="'green'"
+              [ngStyle]="{ 'background-color': 'greenyellow' }"
+            >
+              {{ this.movie.vote_average * 10 | number: "1." }}
+            </span>
+            <span *ngSwitchCase="'black'"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

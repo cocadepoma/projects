@@ -1,0 +1,22 @@
+<h1 *ngIf="this.texto.length > 0" class="mt-3 text-center">
+  Buscador películas con el nombre:
+  <small class="text-capitalize blue">{{ this.texto }}</small>
+</h1>
+
+<div class="row g-0">
+  <div class="col">
+    <div
+      class="row g-0 text-center mt-5 text-white display-1"
+      *ngIf="this.loading"
+    >
+      <div class="col-12">
+        <i class="fas fa-circle-notch fa-spin"></i>
+      </div>
+    </div>
+    <app-peliculas-poster-grid
+      *ngIf="this.movies.length > 0 && this.loading === false"
+      [movies]="this.movies"
+    >
+    </app-peliculas-poster-grid>
+  </div>
+</div>

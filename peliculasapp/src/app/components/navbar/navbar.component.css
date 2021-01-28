@@ -1,0 +1,118 @@
+.bg-nav {
+  background-color: rgba(20, 39, 94, 0.445);
+}
+
+.logo {
+  font-weight: 400;
+  letter-spacing: 3px;
+  font-size: 35px;
+  font-family: "Alegreya Sans SC", sans-serif;
+  color: white !important;
+  text-shadow: 2px 2px 5px rgb(0, 0, 0);
+  margin: 0 auto;
+}
+
+.logo-finder {
+  font-size: 45px;
+  letter-spacing: normal;
+  color: rgb(40, 42, 146);
+  font-weight: 800;
+}
+.wrapper-input {
+  margin: 0 auto;
+}
+.search {
+  border: none;
+  border-width: 0;
+  box-shadow: none;
+  background-color: white;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.search-input {
+  max-width: 180px;
+  border: none;
+  border-width: 0;
+  box-shadow: none;
+  margin: 0 !important;
+  outline: none !important;
+}
+
+.search-icon {
+  color: rgb(27, 27, 136);
+}
+
+.nav-menu-wrapper {
+  background-color: rgba(40, 42, 146, 0.719);
+  color: rgb(129, 194, 255);
+  text-transform: capitalize;
+  font-size: 13px;
+  letter-spacing: 3px;
+}
+.nav-menu {
+  position: relative;
+}
+.nav-menu > li {
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+.nav-menu > li:hover {
+  color: white;
+}
+
+.nav-list {
+  margin: 0;
+}
+.burguer {
+  z-index: 100;
+  position: fixed;
+  top: 73px;
+  left: 5%;
+  letter-spacing: 0;
+  font-size: 25px;
+  padding: 0px 8px;
+  cursor: pointer;
+  background-color: rgba(253, 253, 253, 0.301);
+  transition: all 0.2s ease-in-out;
+  color: rgb(0, 3, 158);
+  border-radius: 3px;
+}
+.burguer:hover {
+  color: rgb(1, 29, 122);
+  background-color: rgba(253, 253, 253, 0.548);
+}
+.responsive-wrapper {
+  z-index: 101;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(20, 21, 94, 0.767);
+  width: 150px;
+  height: 100%;
+  color: white;
+  letter-spacing: 2px;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 25px;
+}
+@media (min-width: 768px) {
+  .logo {
+    margin: unset;
+  }
+  .nav-menu-wrapper {
+    font-size: 14px;
+  }
+  .wrapper-input {
+    margin: unset;
+  }
+}
+@media (min-width: 992px) {
+  .nav-menu-wrapper {
+    font-size: 15px;
+  }
+}

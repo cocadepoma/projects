@@ -11,7 +11,6 @@ import { NasaInterfaces } from 'src/app/interfaces/nasa-interfaces';
 })
 export class SearchComponent implements OnInit {
   public fullDate: Date;
-  public type: string = 'image';
   public infoNasa: NasaInterfaces;
 
   constructor(
@@ -34,13 +33,6 @@ export class SearchComponent implements OnInit {
               }-${this.fullDate.getDate()}`
             )
             .subscribe((data: NasaInterfaces) => {
-              if (data.media_type == 'image') {
-                this.type = 'image';
-              } else if (data.media_type == 'video') {
-                this.type = 'video';
-              } else {
-                console.error('error');
-              }
               this.infoNasa = data;
             });
         } else {

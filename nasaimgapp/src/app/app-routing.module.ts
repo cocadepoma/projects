@@ -5,6 +5,7 @@ import { HomeComponent } from './pages/home/home.component';
 import { RandomComponent } from './pages/random/random.component';
 import { SearchComponent } from './pages/search/search.component';
 import { AngularFireAuthGuard } from '@angular/fire/auth-guard';
+import { ContactComponent } from './pages/contact/contact.component';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
@@ -15,6 +16,7 @@ const routes: Routes = [
     canActivate: [AngularFireAuthGuard],
   },
   { path: 'random', component: RandomComponent },
+  { path: 'contact', component: ContactComponent },
   { path: '**', pathMatch: 'full', redirectTo: 'home' },
 ];
 

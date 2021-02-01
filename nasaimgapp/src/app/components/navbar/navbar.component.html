@@ -7,8 +7,10 @@
   </div>
 
   <div class="icon-wrapper" *ngIf="auth.user | async as user; else showLogin">
-    <span><i class="fas fa-users"></i></span>
-    <span>Hi {{ user.displayName | firstName }}!</span>
+    <div class="user-image-wrapper d-flex flex-column align-items-center me-3">
+      <img class="user-thumbnail" [src]="user.photoURL" alt="user-avatar" />
+      <span>Hi {{ user.displayName | firstName }}!</span>
+    </div>
     <span (click)="logout()">Logout </span
     ><i
       (click)="logout()"
@@ -38,10 +40,10 @@
       routerLink="/favourites"
       routerLinkActive="active"
       *ngIf="auth.user | async as user"
-      ><i class="far fa-heart"></i>Favourites</a
+      ><i class="far fa-heart"></i> Favourites</a
     >
     <a routerLink="/home" routerLinkActive="active"
-      ><i class="fas fa-step-forward"></i>Last</a
+      ><i class="fas fa-step-forward"></i> Last</a
     >
     <a routerLink="/random" routerLinkActive="active"
       ><i class="fas fa-random"></i> Random</a
@@ -50,6 +52,32 @@
   </div>
 
   <div class="d-flex align-items-center justify-content-between p-2 px-3" id="">
+    <div class="date-wrapper d-flex align-items-center">
+      <div class="input-parent">
+        <input
+          class="form-control input-date"
+          placeholder="Choose date"
+          name="dp"
+          [(ngModel)]="this.model"
+          ngbDatepicker
+          #d="ngbDatepicker"
+          [minDate]="{ year: 1995, month: 06, day: 20 }"
+          [maxDate]="getToday()"
+        />
+      </div>
+
+      <div class="date-icon input-group-append">
+        <a class="btn" (click)="d.toggle()"
+          ><i class="far fa-calendar-alt"></i
+        ></a>
+      </div>
+
+      <div class="search" (click)="goToSearch()">
+        <a>
+          <i class="fas fa-search"></i>
+        </a>
+      </div>
+    </div>
     <ul class="navbar-nav me-auto mb-2 mb-lg-0 flex-md-row">
       <li *ngIf="auth.user | async as user" class="nav-item ms-md-3 no-burguer">
         <a
@@ -85,31 +113,5 @@
         ></a>
       </li>
     </ul>
-    <div class="date-wrapper d-flex align-items-center">
-      <div class="input-parent">
-        <input
-          class="form-control input-date"
-          placeholder="Choose date"
-          name="dp"
-          [(ngModel)]="this.model"
-          ngbDatepicker
-          #d="ngbDatepicker"
-          [minDate]="{ year: 1995, month: 06, day: 20 }"
-          [maxDate]="getToday()"
-        />
-      </div>
-
-      <div class="date-icon input-group-append">
-        <a class="btn" (click)="d.toggle()"
-          ><i class="far fa-calendar-alt"></i
-        ></a>
-      </div>
-
-      <div class="search" (click)="goToSearch()">
-        <a>
-          <i class="fas fa-search"></i>
-        </a>
-      </div>
-    </div>
   </div>
 </nav>

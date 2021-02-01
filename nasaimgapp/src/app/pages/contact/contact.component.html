@@ -1,0 +1,101 @@
+<img class="background" [src]="bg" />
+<h2 class="text-center text-white my-5">Contact</h2>
+<form #contactForm="ngForm" (ngSubmit)="onSubmit()">
+  <div class="row">
+    <div class="form-group col-md-6">
+      <label for="email">Email address</label>
+      <input
+        name="email"
+        #email="ngModel"
+        [(ngModel)]="user.email"
+        type="email"
+        class="form-control"
+        id="email"
+        placeholder="Enter email"
+      />
+    </div>
+    <div class="form-group col-md-6">
+      <label for="name">Name</label>
+      <input
+        name="name"
+        #name="ngModel"
+        [(ngModel)]="user.name"
+        type="text"
+        class="form-control"
+        id="name"
+        placeholder="Enter your name"
+      />
+    </div>
+  </div>
+  <div class="row">
+    <div class="form-group col-md-3">
+      <label for="country">Country</label>
+      <input
+        name="country"
+        #country="ngModel"
+        [(ngModel)]="user.country"
+        type="text"
+        class="form-control"
+        id="country"
+        placeholder="City"
+      />
+    </div>
+    <div class="form-group col-md-3">
+      <label for="zipcode">Zip Code</label>
+      <input
+        name="zip"
+        #zip="ngModel"
+        [(ngModel)]="user.zip"
+        type="number"
+        class="form-control"
+        id="zipcode"
+        placeholder="Zip Code"
+      />
+    </div>
+    <div class="form-group col-md-3">
+      <label for="age">Age</label>
+      <input
+        name="age"
+        #age="ngModel"
+        [(ngModel)]="user.age"
+        type="number"
+        class="form-control"
+        id="age"
+        placeholder="Age"
+      />
+    </div>
+    <div class="form-group col-md-3">
+      <label for="exampleInputEmail1">Sex</label>
+      <select
+        name="sex"
+        #sex="ngModel"
+        [(ngModel)]="user.sex"
+        class="form-control form-control-sm"
+      >
+        <option>Male</option>
+        <option>Female</option>
+        <option>Other</option>
+      </select>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <textarea name="text" #text="ngModel" [(ngModel)]="user.text"></textarea>
+    </div>
+  </div>
+  <div class="form-check">
+    <input
+      name="gamer"
+      #gamer="ngModel"
+      [(ngModel)]="user.gamer"
+      type="checkbox"
+      class="form-check-input"
+      id="gamer"
+    />
+    <label class="form-check-label" for="gamer">Gamer</label>
+  </div>
+  <div class="submit mt-5 d-flex flex-row-reverse">
+    <button type="submit" class="btn btn-primary">Send</button>
+  </div>
+</form>
+<app-cookies-advert></app-cookies-advert>

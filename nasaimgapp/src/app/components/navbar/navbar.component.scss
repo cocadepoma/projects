@@ -13,7 +13,8 @@
     display: flex;
 
     .nasa-logo {
-      max-width: 50px;
+      width: 50px !important;
+      height: 40px !important;
     }
 
     h3 {
@@ -35,6 +36,12 @@
     align-items: center;
     color: white;
     font-size: 12px;
+    padding-right: 7px;
+
+    .user-thumbnail {
+      border-radius: 50%;
+      width: 30px;
+    }
 
     span {
       display: none;
@@ -93,7 +100,7 @@ nav {
 
     a {
       text-decoration: none;
-      padding: 7px;
+      padding: 15px;
     }
   }
 
@@ -252,5 +259,16 @@ nav {
     }
 
 
+  }
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: unset !important;
+
+  // Reset positioning when positioned with Popper
+  &[style] {
+    right: 0 !important; // stylelint-disable-line declaration-no-important
   }
 }

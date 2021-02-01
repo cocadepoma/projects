@@ -2,37 +2,57 @@
   <app-loading [message]="message"></app-loading>
 </div>
 <!-- loading image-->
+
 <div *ngIf="isSaving">
   <app-loading [message]="message2"></app-loading>
 </div>
 <!-- saving image-->
 
 <img
+  *ngIf="type == 'image'; else videoBg"
   class="background"
   [src]="infoNasa.url"
   [ngStyle]="{ visibility: isLoading ? 'hidden' : '' }"
   (load)="hideLoader()"
   (error)="hideLoader()"
 />
+<ng-template #videoBg>
+  <img
+    class="background"
+    [src]="video"
+    [ngStyle]="{ visibility: isLoading ? 'hidden' : '' }"
+    (load)="hideLoader()"
+    (error)="hideLoader()"
+  />
+</ng-template>
 <!-- background image-->
 
-<div *ngIf="!isLoading" @fade>
+<div *ngIf="!isLoading" @fadeSlideGrowKeyframe>
   <div
     *ngIf="infoNasa"
     class="p-0 card-group container image-wrapper d-flex justify-content-center flex-column"
   >
     <h2 class="mt-3 text-center">{{ infoNasa.date | date }}</h2>
     <div class="card card-image mt-4">
-      <a [href]="infoNasa.hdurl"
-        ><img [src]="infoNasa.url" class="card-img-top" [alt]="infoNasa.title"
-      /></a>
+      <div class="media" *ngIf="type == 'image'; else videoBlock">
+        <a [href]="infoNasa.hdurl"
+          ><img
+            [src]="infoNasa.url"
+            class="card-img-top"
+            [alt]="infoNasa.title"
+        /></a>
+      </div>
+      <ng-template #videoBlock>
+        <iframe [src]="infoNasa.url | safeUrl" class="card-img-top"></iframe>
+      </ng-template>
+
       <div class="card-body">
         <h5 class="card-title">{{ infoNasa.title }}</h5>
         <p class="card-text">{{ infoNasa.explanation }}</p>
       </div>
       <div class="card-footer">
         <small class="text-muted"
-          >Photo taken on {{ infoNasa.date | date
+          >Taken on {{ infoNasa.date | date
           }}<span *ngIf="infoNasa.copyright">
             by {{ infoNasa.copyright }}</span
           ></small
@@ -49,6 +69,15 @@
     </div>
   </div>
 </div>
+
 <!-- info image-->
-<div class="btn-left"></div>
-<div class="btn-right"></div>
+<div class="btn-left-wrapper d-flex align-items-center">
+  <div (click)="btnLeft()" class="btn-left">
+    <i class="fas fa-chevron-left"></i>
+  </div>
+</div>
+<div class="btn-right-wrapper d-flex align-items-center">
+  <div (click)="btnRight()" class="btn-right">
+    <i class="fas fa-chevron-right"></i>
+  </div>
+</div>

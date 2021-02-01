@@ -18,15 +18,16 @@ import { FooterComponent } from './components/footer/footer.component';
 import { GridComponent } from './components/grid/grid.component';
 import { LoadingComponent } from './components/loading/loading.component';
 import { ImageComponent } from './components/image/image.component';
-import { VideoComponent } from './components/video/video.component';
 import { LoginComponent } from './components/login/login.component';
 import { ScrollToTopComponent } from './components/scroll-to-top/scroll-to-top.component';
+import { CookiesAdvertComponent } from './components/cookies-advert/cookies-advert.component';
 
 //*********/ Pages /*********//
 import { HomeComponent } from './pages/home/home.component';
 import { SearchComponent } from './pages/search/search.component';
 import { FavouritesComponent } from './pages/favourites/favourites.component';
 import { RandomComponent } from './pages/random/random.component';
+import { ContactComponent } from './pages/contact/contact.component';
 
 //*********/ NgBoostrap /*********//
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
@@ -52,7 +53,6 @@ import { AngularFireAuthModule } from '@angular/fire/auth';
     HomeComponent,
     SearchComponent,
     ImageComponent,
-    VideoComponent,
     FavouritesComponent,
     LoadingComponent,
     SafeUrlPipe,
@@ -60,6 +60,8 @@ import { AngularFireAuthModule } from '@angular/fire/auth';
     FirstNamePipe,
     LoginComponent,
     ScrollToTopComponent,
+    ContactComponent,
+    CookiesAdvertComponent,
   ],
   imports: [
     BrowserModule,

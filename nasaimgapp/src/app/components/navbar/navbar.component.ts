@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { NgbDateStruct } from '@ng-bootstrap/ng-bootstrap';
-import { AngularFireAuth } from '@angular/fire/auth';
 import { NasaService } from 'src/app/services/nasa.service';
+import { AngularFireAuth } from '@angular/fire/auth';
 
 @Component({
   selector: 'app-navbar',
@@ -14,6 +14,7 @@ export class NavbarComponent implements OnInit {
   public loginTemplate: boolean = false;
   public responsive: boolean = false;
   public today: NgbDateStruct;
+
   constructor(
     private router: Router,
     public auth: AngularFireAuth,
@@ -47,9 +48,13 @@ export class NavbarComponent implements OnInit {
         day: date.getDate() - 1,
       };
     } else {
+      let date = new Date();
+
+      date.setMonth(date.getMonth());
+      date.setDate(0); // get the last day of previous month
       now = {
         year: date.getFullYear(),
-        month: date.getMonth(),
+        month: date.getMonth() + 1,
         day: date.getDate(),
       };
     }

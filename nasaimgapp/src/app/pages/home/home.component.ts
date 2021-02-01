@@ -9,7 +9,7 @@ import { NasaService } from 'src/app/services/nasa.service';
 })
 export class HomeComponent implements OnInit {
   public infoNasa: NasaInterfaces;
-  public type: string = 'image';
+
   constructor(private nasaService: NasaService) {}
 
   ngOnInit(): void {
@@ -25,13 +25,6 @@ export class HomeComponent implements OnInit {
         `${date.getFullYear()}-${date.getMonth() + 1}-${date.getDate()}`
       )
       .subscribe((data: NasaInterfaces) => {
-        if (data.media_type == 'image') {
-          this.type = 'image';
-        } else if (data.media_type == 'video') {
-          this.type = 'video';
-        } else {
-          console.error('Invalid interface type');
-        }
         this.infoNasa = data;
       });
   }

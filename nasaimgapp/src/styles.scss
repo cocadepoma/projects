@@ -1,0 +1,43 @@
+/* You can add global styles to this file, and also import other style files */
+body {
+  background-color: rgb(99, 99, 99) !important;
+}
+
+.root {
+  height: 100%;
+}
+
+img {
+  max-width: 100%;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+nav {
+
+  a {
+    color: rgb(204, 204, 204) !important;
+    transition: all 0.3s ease-in-out !important;
+  }
+
+  a.active {
+    color: rgb(190, 3, 3) !important;
+  }
+
+  a:hover {
+    color: rgb(190, 3, 3) !important;
+
+  }
+
+}
+
+/* Importing Bootstrap SCSS file. */
+@import '~bootstrap/scss/bootstrap';

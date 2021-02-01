@@ -29,7 +29,7 @@ require_once('./database/connection.php');
             $conn = connect();
             if ($conn) {
 
-                $query = "SELECT * FROM proyectos LIMIT 3";
+                $query = "SELECT * FROM proyectos LIMIT 6";
 
                 if ($result = $conn->query($query)) {
                     while ($row = $result->fetch_assoc()) {

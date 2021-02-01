@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: localhost
--- Tiempo de generación: 28-01-2021 a las 07:43:07
+-- Tiempo de generación: 01-02-2021 a las 02:36:06
 -- Versión del servidor: 10.2.10-MariaDB
 -- Versión de PHP: 7.2.34
 
@@ -20,8 +20,6 @@ SET time_zone = "+00:00";
 --
 -- Base de datos: `blog`
 --
-CREATE DATABASE IF NOT EXISTS `blog` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
-USE `blog`;
 
 -- --------------------------------------------------------
 
@@ -122,7 +120,9 @@ CREATE TABLE `proyectos` (
 INSERT INTO `proyectos` (`id`, `nombre`, `portada`, `url`, `descripcion`, `activo`) VALUES
 (1, 'Portfolio & Blog', 'port-blog.png', 'http://3.88.13.48', 'Proyecto realizado con HTML5, CSS, JS, JQuery, AJAX y PHP', 1),
 (2, 'Masturshop', 'masturshop.png', 'http://3.88.13.48:81', 'Proyecto realizado con HTML5, CSS, JS y Bootstrap', 1),
-(3, 'MovieFinder', 'moviefinder.png', 'http://3.88.13.48:8080', 'Proyecto realizado con Angular', 1);
+(3, 'MovieFinder', 'moviefinder.png', 'http://3.88.13.48:8080', 'Proyecto realizado con Angular', 1),
+(4, 'nasaImageApp', 'nasaImageApp.png', 'http://3.88.13.48:8081', 'Angular + Firebase', 1),
+(5, 'AdminCms', 'admincms.png', 'http://3.88.13.48:8082', 'HTML5, Bootstrap, JS, Jquery, AJAX', 1);
 
 -- --------------------------------------------------------
 
@@ -201,7 +201,7 @@ ALTER TABLE `categorias`
 -- AUTO_INCREMENT de la tabla `proyectos`
 --
 ALTER TABLE `proyectos`
-  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT de la tabla `usuarios`

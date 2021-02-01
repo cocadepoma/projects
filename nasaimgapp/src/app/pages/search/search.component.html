@@ -1,0 +1,8 @@
+<div *ngIf="type == 'image'">
+  <app-image *ngIf="infoNasa" [infoNasa]="infoNasa"></app-image>
+</div>
+
+<div *ngIf="type == 'video'">
+  <app-video *ngIf="infoNasa" [infoNasa]="infoNasa"></app-video>
+</div>
+<app-scroll-to-top></app-scroll-to-top>

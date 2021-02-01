@@ -1,0 +1,129 @@
+.login-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.829);
+  z-index: 100;
+  overflow-y: scroll;
+
+  .login-wrapper {
+    position: relative;
+    top: calc(50% - 200px);
+    margin: 0 auto;
+    background-color: rgb(255, 255, 255);
+    height: 380px;
+    width: 340px;
+    border-radius: 5px;
+    padding: 10px;
+
+    .close {
+      position: absolute;
+      right: 20px;
+      top: 15px;
+      cursor: pointer;
+      transition: all 0.2s ease-in-out;
+      z-index: 100;
+
+      i {
+        font-size: 18px;
+      }
+    }
+
+    .logo-wrapper {
+      margin-top: 10px;
+      margin-bottom: 40px;
+
+      .nasa-logo {
+        max-width: 50px;
+        display: block;
+        margin: 0 auto;
+      }
+
+      h3 {
+        font-family: 'Cinzel Decorative', cursive;
+        text-shadow: 4px 4px 5px rgba(39, 39, 39, 0.54);
+        text-align: center;
+        color: rgb(0, 0, 0);
+        font-size: 18px;
+        margin: 0;
+
+        span {
+          font-weight: bold;
+        }
+      }
+
+    }
+
+    i {
+      font-size: 30px;
+    }
+
+    button {
+      font-family: sans-serif;
+      font-size: 18px;
+      color: white;
+      display: flex;
+      align-items: center;
+      padding: 5px 10px 2px 10px;
+      width: 240px;
+      border-radius: 5px;
+      border: none;
+      transition: all 0.3s ease-in-out;
+      -webkit-box-shadow: 10px 10px 7px -3px rgba(0, 0, 0, 0.22);
+      -moz-box-shadow: 10px 10px 7px -3px rgba(0, 0, 0, 0.22);
+      box-shadow: 10px 10px 7px -3px rgba(0, 0, 0, 0.22);
+
+
+    }
+
+    .google {
+      background-color: rgb(204, 79, 79);
+      margin: 0 auto 10px auto;
+
+      &:hover {
+        background-color: rgb(248, 83, 83);
+
+      }
+    }
+
+    .facebook {
+      background-color: rgb(58, 103, 189);
+      margin: 0 auto 10px auto;
+
+      &:hover {
+        background-color: rgb(33, 76, 155);
+
+      }
+    }
+
+    .github {
+      background-color: black;
+      margin: 0 auto 10px auto;
+
+      &:hover {
+        background-color: rgb(39, 39, 39);
+
+      }
+    }
+
+    .twitter {
+      background-color: rgb(118, 163, 247);
+      margin: 0 auto 10px auto;
+
+      &:hover {
+        background-color: rgb(72, 123, 219);
+
+      }
+    }
+  }
+}
+
+.animate__animated.animate__zoomIn {
+  --animate-duration: 0.3s;
+}
+
+.animate__animated.animate__pulse.animate__infinite {
+  --animate-duration: 10s;
+}

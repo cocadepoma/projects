@@ -1,0 +1,42 @@
+.go-top {
+  /*   display: none; */
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.137);
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  text-align: center;
+  animation-name: fly;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  cursor: pointer;
+
+  img {
+    max-width: 38px;
+  }
+}
+
+@keyframes fly {
+  0% {
+    transform: translateY(0px)
+  }
+
+  25% {
+    transform: translateY(-5px)
+  }
+
+  50% {
+    transform: translateY(-10px)
+  }
+
+  75% {
+    transform: translateY(-15px)
+  }
+
+
+
+  100% {
+    transform: translateY(0px);
+  }
+}

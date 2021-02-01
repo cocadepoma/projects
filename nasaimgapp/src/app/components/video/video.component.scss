@@ -1,0 +1,27 @@
+h2 {
+  color: rgb(187, 187, 187);
+}
+
+iframe {
+  height: 400px;
+}
+
+.card-image {
+  max-width: 650px;
+  margin: 0 auto;
+}
+
+.background {
+  z-index: -1;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  height: 100vh;
+  width: 100vw;
+  -webkit-filter: blur(4px);
+  filter: grayscale(0.7) blur(5px) brightness(0.6);
+  background-position: center center;
+  background-size: cover;
+}

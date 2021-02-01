@@ -1,0 +1,19 @@
+<div *ngIf="isLoading">
+  <app-loading [message]="message"></app-loading>
+</div>
+<!-- loading image-->
+
+<img class="background" [src]="url" />
+<!-- background image-->
+
+<h3 class="my-5"><a>Your Favourites</a></h3>
+<app-grid
+  *ngIf="images.length > 0; else nodata"
+  [nasaData]="images"
+  [canDelete]="canDelete"
+></app-grid>
+<ng-template #nodata>
+  <h4 class="text-center">*No results, try to add some images</h4>
+</ng-template>
+
+<app-scroll-to-top></app-scroll-to-top>

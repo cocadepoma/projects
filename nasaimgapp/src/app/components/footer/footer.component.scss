@@ -1,0 +1,70 @@
+footer {
+  margin-top: 40px;
+  -webkit-box-shadow: -1px -7px 24px 6px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: -1px -7px 24px 6px rgba(0, 0, 0, 0.75);
+  box-shadow: -1px -7px 24px 6px rgba(0, 0, 0, 0.75);
+
+  p {
+    margin: 0;
+  }
+
+  p {
+    text-align: center;
+    color: rgba(255, 255, 255, 0.288);
+
+    a {
+      color: white;
+      transition: all 0.3s ease-in-out;
+
+      &:hover {
+        color: rgb(190, 3, 3);
+      }
+    }
+  }
+
+  a {
+    transition: all 0.3s ease-in-out !important;
+  }
+
+  .nasa-wrapper {
+
+    border-top: 2px solid rgb(190, 3, 3);
+    padding-top: 13px;
+    background-color: rgba(39, 39, 39, 0.774);
+
+    .nasa-logo {
+      max-width: 40px;
+    }
+
+    h3 {
+      font-family: 'Cinzel Decorative', cursive;
+      text-shadow: 4px 4px 5px rgba(0, 0, 0, 0.54);
+      color: white;
+      font-size: 18px;
+
+      span {
+        font-weight: bold;
+      }
+    }
+  }
+
+
+  .frs {
+    font-size: 12px;
+    padding: 6px 0;
+    width: 100%;
+    background-color: rgb(39, 39, 39);
+
+    a {
+      color: rgba(255, 255, 255, 0.288);
+    }
+
+  }
+
+}
+
+@media (min-width: 992px) {
+  .author {
+    padding-left: 30px;
+  }
+}

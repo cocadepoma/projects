@@ -1,6 +1,6 @@
 <?php
 session_start();
-if (isset($_SESSION['user']) && isset($_SESSION['id'])) {
+if (isset($_SESSION['testing_user']) && isset($_SESSION['testing_id'])) {
     header('location: admin-area.php');
 }
 if (isset($_GET['close_session']) && strlen($_GET['close_session']) > 0) {

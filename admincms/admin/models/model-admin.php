@@ -26,8 +26,8 @@ if (isset($_POST['user']) && isset($_POST['pwd'])) {
             if ($exists) {
                 if (password_verify($password, $admin_password)) {
                     session_start();
-                    $_SESSION['id'] = $id_admin;
-                    $_SESSION['user'] = $admin_name;
+                    $_SESSION['testing_id'] = $id_admin;
+                    $_SESSION['testing_user'] = $admin_name;
 
                     $response = array(
                         'respuesta' => 'success',

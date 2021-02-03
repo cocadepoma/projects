@@ -34,10 +34,13 @@ require_once('./database/connection.php');
                 if ($result = $conn->query($query)) {
                     while ($row = $result->fetch_assoc()) {
                         if ($row['activo']) { ?>
-                            <a href="<?php echo $row['url']; ?>" target="_blank" class="project">
-                                <img src="./img/projects/<?php echo $row['portada']; ?>" alt="<?php echo 'img-' . $row['nombre']; ?>">
-                                <span class="info-project"><?php echo $row['nombre']; ?></span>
-                            </a>
+                            <div class="tooltip">
+                                <a href="<?php echo $row['url']; ?>" target="_blank" class="project">
+                                    <img src="./img/projects/<?php echo $row['portada']; ?>" alt="<?php echo 'img-' . $row['nombre']; ?>">
+                                    <span class="info-project"><?php echo $row['nombre']; ?></span>
+                                </a>
+                                <span class="tooltiptext"><?php echo $row['descripcion']; ?></span>
+                            </div>
             <?php }
                     }
                 }

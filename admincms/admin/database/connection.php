@@ -6,7 +6,7 @@ mysqli_report(MYSQLI_REPORT_STRICT);
 function connect()
 {
     try {
-        $conn = new mysqli('localhost', 'root', '', 'blog');
+        $conn = new mysqli('localhost', 'root', '', 'port_blog');
         $conn->set_charset("utf8");
         if ($conn) {
             return $conn;

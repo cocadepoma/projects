@@ -23,7 +23,7 @@ if (isset($_POST['new']) && $_POST['new'] == "1") {
 
     if (isset($_FILES['article-img'])) {
 
-        $target_dir = $_SERVER['DOCUMENT_ROOT'] . "/blog/img/blog/";
+        $target_dir = $_SERVER['DOCUMENT_ROOT'] . "/img/blog/";
         $name = pathinfo($_FILES['article-img']['name'], PATHINFO_FILENAME);
         $extension = strtolower(pathinfo($_FILES['article-img']['name'], PATHINFO_EXTENSION));
         $filename_database = $name . "-" . date("m-j-Y-Hms") . "." . $extension;
@@ -210,7 +210,7 @@ if (isset($_POST['update']) && $_POST['update'] == "1") {
 
     if (isset($_FILES['article-img'])) {
 
-        $target_dir = $_SERVER['DOCUMENT_ROOT'] . "/blog/img/blog/";
+        $target_dir = $_SERVER['DOCUMENT_ROOT'] . "/img/blog/";
         $name = pathinfo($_FILES['article-img']['name'], PATHINFO_FILENAME);
         $extension = strtolower(pathinfo($_FILES['article-img']['name'], PATHINFO_EXTENSION));
         $filename_database = $name . "-" . date("m-j-Y-Hms") . "." . $extension;

@@ -26,7 +26,8 @@ if (isset($_POST['edit']) && $_POST['edit'] == 1) {
 
         if (isset($_FILES['img-project'])) {
 
-            $target_dir = $_SERVER['DOCUMENT_ROOT'] . "/blog/img/projects/";
+            $target_dir = $_SERVER['DOCUMENT_ROOT'] . "/img/projects/";
+
             $name = pathinfo($_FILES['img-project']['name'], PATHINFO_FILENAME);
             $extension = strtolower(pathinfo($_FILES['img-project']['name'], PATHINFO_EXTENSION));
             $filename_database = $name . "-" . date("m-j-Y-Hms") . "." . $extension;
@@ -167,7 +168,7 @@ if (isset($_POST['delete']) && $_POST['delete'] == 1 && isset($_POST['id']) && s
 
 if (isset($_POST['new']) && $_POST['new'] == 1) {
 
-    $target_dir = $_SERVER['DOCUMENT_ROOT'] . "/blog/img/projects/";
+    $target_dir = $_SERVER['DOCUMENT_ROOT'] . "/img/projects/";
     $file_name = basename($_FILES['img-project']['name']);
     $target_file = $target_dir . $file_name;
     $extension_file = strtolower(pathinfo($target_file, PATHINFO_EXTENSION));

@@ -1,9 +1,31 @@
+<?php
+$page = basename($_SERVER['PHP_SELF']);
+$metas =   "<meta name='author' content='Francisco Rodriguez' />
+            <meta name='copyright' content='FRS' />
+            <meta name='keywords' content='developer, angular, ionic, html, css, acuarios' />
+            <meta name='description' content='My name is Fran, and I was born in 1988 in Vila-real, a large village from Spain. I am married with the woman of my dreams and I have two beautiful children, and thanks to them, I am then man who I am right now.' />";
+?>
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 
 <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-DVX5ZMZDLY"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-DVX5ZMZDLY');
+    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <? echo $page  == 'index.php' ?  $metas : "" ; ?>
+    <meta name="author" content="Francisco Rodriguez" />
+    <meta name="copyright" content="FRS" />
+    <meta name="keywords" content="developer, angular, ionic, html, css, acuarios" />
+    <meta name="description" content="My name is Fran, and I was born in 1988 in Vila-real, a large village from Spain. I am married with the woman of my dreams and I have two beautiful children, and thanks to them, I am then man who I am right now." />
+    <link rel="shortcut icon" type="image/jpg" href="img/favicon.ico" />
     <title>Francisco Rodriguez WebPage</title>
     <script src="https://kit.fontawesome.com/4211956054.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/styles.css">
@@ -12,8 +34,6 @@
 
 </head>
 <?php
-$page = basename($_SERVER['PHP_SELF']);
-
 if ($page  == 'projects.php' || $page == 'contact.php') {
     echo "<body class='extend'>";
 } else {

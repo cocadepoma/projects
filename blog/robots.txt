@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: http://francisco-rodriguez.site/sitemap.xml

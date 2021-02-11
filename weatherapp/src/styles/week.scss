@@ -1,0 +1,94 @@
+$colorgrey1: rgba(0, 0, 0, 0.719);
+
+.week-container {
+
+    h1 {
+        color: rgb(88, 88, 88);
+    }
+
+    a {
+        font-size: 20px;
+    }
+
+    .week-wrapper {
+        margin: 0 auto;
+        max-width: 800px;
+        overflow-x: scroll;
+
+
+        .day-wrapper {
+            background: rgba(255, 255, 255, 0.89);
+            border-right: 1px solid rgba(0, 0, 0, 0.192);
+            flex: 1 1 33% !important;
+
+            .week-day {
+                text-align: center;
+                background-color: $colorgrey1;
+                padding: 20px;
+                color: white;
+            }
+
+            .week-icon {
+                padding: 15px 0;
+                text-align: center;
+
+                span {
+                    font-size: 12px;
+                }
+
+                img {
+                    width: 70px;
+                }
+            }
+
+            .week-pop {
+                text-align: center;
+                padding: 15px 0;
+                background-color: rgba(0, 0, 0, 0.082);
+
+                img {
+                    width: 25px;
+                    margin-right: 4px;
+                }
+            }
+
+            .min-max {
+                padding: 15px 0;
+                text-align: center;
+
+                img {
+                    width: 8px;
+                    height: 21px;
+                    margin-right: 3px;
+                }
+            }
+
+            .wind-speed {
+                background-color: rgba(0, 0, 0, 0.082);
+                padding: 15px 0;
+                text-align: center;
+
+                img {
+                    width: 25px;
+                }
+            }
+
+            .wind-direction {
+                text-align: center;
+                padding: 15px;
+                display: flex;
+                justify-content: center;
+
+                img {
+                    width: 25px;
+                    margin-right: 5px;
+                }
+
+                span {
+                    align-self: flex-end;
+                    margin-left: 5px;
+                }
+            }
+        }
+    }
+}

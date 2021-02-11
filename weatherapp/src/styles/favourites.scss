@@ -1,0 +1,115 @@
+.fav-wrapper {
+
+    h1 {
+        color: rgb(88, 88, 88);
+    }
+
+    .favourites {
+        list-style: none;
+        padding: 0;
+        background: rgba(255, 255, 255, 0.89);
+        border: 1px solid 1px solid rgba(0, 0, 0, 0.123);
+        max-width: 550px;
+        -webkit-box-shadow: 10px 10px 13px -5px rgba(0, 0, 0, 0.56);
+        -moz-box-shadow: 10px 10px 13px -5px rgba(0, 0, 0, 0.56);
+        box-shadow: 10px 10px 13px -5px rgba(0, 0, 0, 0.56);
+        margin: 30px auto;
+
+        h4,
+        h6 {
+            margin: 0;
+        }
+
+        li {
+            border-bottom: 1px solid rgba(0, 0, 0, 0.116);
+            transition: all 0.3s ease-in-out;
+
+            &:hover {
+                -webkit-box-shadow: 0px 0px 13px -5px rgba(0, 0, 0, 0.56);
+                -moz-box-shadow: 0px 0px 13px -5px rgba(0, 0, 0, 0.904);
+                box-shadow: 0px 0px 13px -5px rgba(0, 0, 0, 0.56);
+            }
+
+            .wrapper-li {
+                padding: 10px;
+
+                .btn-circle {
+                    width: 30px;
+                    height: 30px;
+                    padding: 6px 0px;
+                    border-radius: 15px;
+                    text-align: center;
+                    font-size: 12px;
+                    line-height: 1.42857;
+                }
+
+                h6 {
+                    cursor: pointer;
+                }
+
+                img {
+                    width: 60px;
+                }
+
+                .info-weather {
+                    font-size: 12px;
+                }
+            }
+        }
+
+    }
+}
+
+
+@media (min-width: 768px) {
+    .favourites {
+
+        h4 {
+            font-size: 30px;
+        }
+
+        h6 {
+            font-size: 20px;
+        }
+
+        li {
+            .wrapper-li {
+
+                img {
+                    width: 70px;
+                }
+
+                .info-weather {
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 992px) {
+    .favourites {
+        max-width: 600px;
+
+        h4 {
+            font-size: 34px;
+        }
+
+        h6 {
+            font-size: 23px;
+        }
+
+        li {
+            .wrapper-li {
+
+                img {
+                    width: 80px;
+                }
+
+                .info-weather {
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+}

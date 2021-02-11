@@ -10,11 +10,11 @@
         </div>
         <div class="rrss">
             <div class="box">
-                <a target="_blank" href="https://www.facebook.com/pacors88"><img class="greyeffect" src="img/icons/facebook.png"> on facebook</a>
-                <a target="_blank" href="https://www.linkedin.com/in/pacors88/"><img class="greyeffect" src="img/icons/linkedin.png"> on linkedin</a>
-                <a target="_blank" href="https://twitter.com/pacoRS88"><img class="greyeffect" src="img/icons/twitter.png"> on twitter</a>
-                <a target="_blank" href="https://www.youtube.com/channel/UCjy0UTSRKxcppnRkhMxJKcA"><img class="greyeffect" src="img/icons/youtube.png"> on youtube</a>
-                <a target="_blank" href="https://github.com/soyl3y3nd4"><img class="greyeffect" src="img/icons/github.png"> on github</a>
+                <a target="_blank" href="https://www.facebook.com/pacors88"><img class="greyeffect" src="img/icons/facebook.png" alt="social-media-face"> on facebook</a>
+                <a target="_blank" href="https://www.linkedin.com/in/pacors88/"><img class="greyeffect" src="img/icons/linkedin.png" alt="social-media-link"> on linkedin</a>
+                <a target="_blank" href="https://twitter.com/pacoRS88"><img class="greyeffect" src="img/icons/twitter.png" alt="social-media-twitter"> on twitter</a>
+                <a target="_blank" href="https://www.youtube.com/channel/UCjy0UTSRKxcppnRkhMxJKcA"><img class="greyeffect" src="img/icons/youtube.png" alt="social-media-youtube"> on youtube</a>
+                <a target="_blank" href="https://github.com/soyl3y3nd4"><img class="greyeffect" src="img/icons/github.png" alt="social-media-git"> on github</a>
             </div>
         </div>
 

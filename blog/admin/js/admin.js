@@ -137,13 +137,14 @@ $().ready(() => {
             $.ajax({
                 url: "./models/model-project.php",
                 data: datos,
-                dataType: "json",
+                dataType: "html",
                 type: "POST",
                 contentType: false, //contentType*
                 processData: false, //processData*
                 async: true, //async*
                 cache: false, //cache*
                 success: (data) => {
+                    console.log(data);
                     if (data.respuesta == "exito" && data.hasOwnProperty("imagen") && data.proyecto.length > 0) {
                         Swal.fire({
                             icon: "success",

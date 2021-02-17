@@ -26,15 +26,15 @@ const Contact = () => {
                 </h5>
                 <h5>
                     <strong>Email:</strong>
-                    {formData.name}
+                    {formData.email}
                 </h5>
                 <h5>
                     <strong>Teléfono:</strong>
-                    {formData.name}
+                    {formData.phone}
                 </h5>
                 <p>
                     <strong>Mensaje:</strong>
-                    {formData.name}
+                    {formData.message}
                 </p>
             </div>,
             {

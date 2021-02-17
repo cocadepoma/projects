@@ -16,6 +16,9 @@ class City extends Component {
     }
 
     async getData(city, url, url2) {
+        if (city === undefined) {
+            return;
+        }
         try {
             const [weather1, weather2] = await Promise.all([
                 fetch(url).then((resp) => resp.json()),

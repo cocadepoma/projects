@@ -58,7 +58,7 @@ const DayWeather = (props) => {
 
     return (
         <div className="weather-container">
-            <h1>El tiempo hoy</h1>
+            <h1>El tiempo hoy en:</h1>
             <div className="weather-wrapper animate__animated animate__fadeIn animate__faster">
                 <h3
                     className="text-center"

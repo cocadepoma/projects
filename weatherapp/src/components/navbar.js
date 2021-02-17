@@ -1,6 +1,5 @@
 import React, { Component } from "react";
-import { NavLink, withRouter, Redirect } from "react-router-dom";
-import City from "../pages/city";
+import { NavLink, withRouter } from "react-router-dom";
 import "../styles/layout.scss";
 
 class Navbar extends Component {

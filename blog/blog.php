@@ -27,7 +27,7 @@ require_once('./database/connection.php');
                                 <p><?php echo $row['preview']; ?></p>
 
                                 <p class="p-date">
-                                    <?php echo date('H:i a d-m-Y', strtotime($row['fecha'])); ?>
+                                    <?php echo date('d-m-Y', strtotime($row['fecha'])); ?>
 
                                     publicado por: <span class="bold"><?php echo $row['autor']; ?></span>
                                 </p>

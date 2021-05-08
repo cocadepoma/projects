@@ -584,7 +584,7 @@ main {
     font-size: 1.3rem;
     color: rgb(128, 128, 128);
     letter-spacing: 2px;
-    text-shadow: 5px 2px 6px rgba(150, 150, 150, 0.671);
+    text-shadow: 5px 2px 6px rgba(150, 150, 150, 0.262);
 }
 
 .about-me p:first-of-type {

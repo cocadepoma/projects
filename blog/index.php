@@ -17,9 +17,9 @@ require_once('./database/connection.php');
                     Hi! My name is Fran, and I was born in 1988 in Vila-real, a large village from Spain.
                 </p>
                 <p>I set up my career as an Electromechanical Technician, and I had been working as it until August 2019, when I decided to start a new career as a Developer.</p>
-                <p class="mt-1">My beginnings were as a Freelance doing projects for small companies, and also studying on a Certificate of Higher Education in Web Applications. In addition to studying a Certificate and working as a Freelance, I was learning in an autodidactical way some courses about new technologies on Udemy.</p>
+                <p class="mt-1">My beginnings were as a Freelance doing projects for small companies, and also studying for a Certificate of Higher Education in Web Applications. In addition to studying a Certificate and working as a Freelance, I was learning on my own doing courses about new technologies on Udemy.</p>
                 <p class="mt-1">My favourite technologies are React plus Redux, NodeJS, SASS, CSS and JavaScript frameworks/libraries like Angular, VueJS or jQuery. I also worked with Java, PHP, AJAX, Bootstrap, MySQL, MongoDB and Firebase.</p>
-                <p class="mt-1">My next steps are improve my English, start a Bachelor Degree in Informatics Engineering and learn React Native in order to make mobile applications in my main stack.</p>
+                <p class="mt-1">My next steps are improving my English, start a Bachelor Degree in Informatics Engineering and learn React Native in order to make mobile applications in the future.</p>
             </div>
 
         </section>

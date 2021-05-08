@@ -13,8 +13,13 @@ require_once('./database/connection.php');
                 <img src="img/img-1.jpg" alt="frs">
             </div>
             <div class="me">
-                <p>My name is Fran, and I was born in 1988 in Vila-real, a large village from Spain. I am married with the woman of my dreams and I have two beautiful children, and thanks to them, I am then man who I am right now.</p>
-                <p>After a few years working as an electromechanical in the ceramic industry, I was tired and sad because I didn't like my job and what I was doing at that time, so I needed a change. After a while I discovered web and app developing and afterwards in 2019 I made an important step into my life, I decided to start to learn more about developing at full time. Furthermore, I have to say that it was a very brave decision and I think it was the best decision I ever made for years. At this moment I'm studying web developing applications at Didáctica Ágil Centros Academy in Castellón, and my next steps are going to get more knowledge about Angular and Ionic, frameworks what I love. Apart from that, I've been doing a few extra courses and I also want to improve my skill by learning new technologies.</p>
+                <p>
+                    Hi! My name is Fran, and I was born in 1988 in Vila-real, a large village from Spain.
+                </p>
+                <p>I set up my career as an Electromechanical Technician, and I had been working as it until August 2019, when I decided to start a new career as a Developer.</p>
+                <p class="mt-1">My beginnings were as a Freelance doing projects for small companies, and also studying on a Certificate of Higher Education in Web Applications. In addition to studying a Certificate and working as a Freelance, I was learning in an autodidactical way some courses about new technologies on Udemy.</p>
+                <p class="mt-1">My favourite technologies are React plus Redux, NodeJS, SASS, CSS and JavaScript frameworks/libraries like Angular, VueJS or jQuery. I also worked with Java, PHP, AJAX, Bootstrap, MySQL, MongoDB and Firebase.</p>
+                <p class="mt-1">My next steps are improve my English, start a Bachelor Degree in Informatics Engineering and learn React Native in order to make mobile applications in my main stack.</p>
             </div>
 
         </section>

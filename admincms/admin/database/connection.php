@@ -6,7 +6,7 @@ mysqli_report(MYSQLI_REPORT_STRICT);
 function connect()
 {
     try {
-        $conn = new mysqli('localhost', 'user', '', 'name_bbdd');
+        $conn = new mysqli('localhost', 'username', 'pwd', 'name_db');
         $conn->set_charset("utf8");
         if ($conn) {
             return $conn;

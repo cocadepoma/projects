@@ -3,7 +3,7 @@ $page = basename($_SERVER['PHP_SELF']);
 $metas =   "<meta name='author' content='Francisco Rodriguez' />
             <meta name='copyright' content='FRS' />
             <meta name='keywords' content='developer, angular, ionic, html, css, acuarios' />
-            <meta name='description' content='My name is Fran, and I was born in 1988 in Vila-real, a large village from Spain. I am married with the woman of my dreams and I have two beautiful children, and thanks to them, I am then man who I am right now.' />";
+            <meta name='description' content='My name is Fran, and I am a web developer mainly working on React, Redux, NodeJS and Angular' />";
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -24,7 +24,6 @@ $metas =   "<meta name='author' content='Francisco Rodriguez' />
     <meta name="author" content="Francisco Rodriguez" />
     <meta name="copyright" content="FRS" />
     <meta name="keywords" content="developer, angular, ionic, html, css, acuarios" />
-    <meta name="description" content="My name is Fran, and I was born in 1988 in Vila-real, a large village from Spain. I am married with the woman of my dreams and I have two beautiful children, and thanks to them, I am then man who I am right now." />
     <link rel="shortcut icon" type="image/jpg" href="img/favicon.ico" />
     <title>Francisco Rodriguez WebPage</title>
     <script src="https://kit.fontawesome.com/4211956054.js" crossorigin="anonymous"></script>
